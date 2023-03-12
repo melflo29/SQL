@@ -1,0 +1,15 @@
+--Create a shoe store database
+
+CREATE TABLE shoes (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, in_stock INTEGER);
+INSERT INTO shoes VALUES (1, "Vans", 25, 80, 10);
+INSERT INTO shoes VALUES (2, "Nike", 30, 120, 15);
+INSERT INTO shoes VALUES (3, "Tretorn", 15, 90, 9);
+INSERT INTO shoes VALUES (4, "Adidas", 35, 180, 7);
+INSERT INTO shoes VALUES (5, "Hoka", 10, 190, 3);
+SELECT * FROM shoes;
+
+--Display the database ordered by price
+SELECT * FROM shoes WHERE price ORDER BY price ASC;
+
+--Display total number of shoes in stock
+SELECT SUM(in_stock) FROM shoes;
